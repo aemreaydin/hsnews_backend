@@ -26,7 +26,7 @@ const typeDefs = fs.readFileSync(
 const pubsub = new PubSub();
 const prisma = new PrismaClient();
 const server = new ApolloServer({
-  cors: true,
+  cors: false,
   typeDefs,
   resolvers,
   context: ({ req }) => {
